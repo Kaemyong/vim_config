@@ -24,10 +24,25 @@ set shellslash
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin('$HOME/.vim/bundle')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
+Plugin 'VundleVim/Vundle.vim' "vim plugin management
+Plugin 'scrooloose/nerdtree' "file list view plugin
+Plugin 'Raimondi/delimitMate' "brace auto writing
+Plugin 'majutsushi/tagbar'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()           
 filetype plugin indent on
 
-nmap <F9> :NERDTreeToggle<CR> 
+nmap <F2> :NERDTreeToggle<CR>
+nmap <F3> :TagbarToggle<CR>
+
+let delimitMate_expand_cr=1 "Raimondi/delimiteMate
+let Tlist_Ctags_cmd="C:/Windows/System32/ctags.exe" "windows ctags enable
+
+let g:indentguides_spacechar = '|'
+let g:indentguides_tabchar = '|'
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+
+
